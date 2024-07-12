@@ -15,6 +15,8 @@ This code utilizes the `transformers` library to create a simple text summarizat
 **Requirements:**
 
 * transformers library (`pip install transformers`)
+* flask (pip install flask)
+* torch (pip install torch) (if you want specific version 2.0 like that)
 
 **Usage:**
 
