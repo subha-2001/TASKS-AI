@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarizer</title>
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(to right,black,white);
+        }
+        .container {
+            width: 100%;
+            max-height: 400px;
+            margin-top: 5rem;
+            max-width: 330px;
+            height: 100vh;
+            padding: 10px;
+            border-radius: 12px;
+            background-color: cadetblue;
+        }
+        #summary {
+            margin-top: 5px;
+            border: none;
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+            border-radius: 12px;
+            content: " ";
+            background-color: rgb(89, 89, 246);
+        }
+        #msg {
+            width: 90%;
+            height: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Text Summarization</h1>
+            <form method="POST">
+                <textarea id="msg" name="text" placeholder="Enter your text here"></textarea>
+                <button id="summary">Summarize</button>
+            </form>
+            {% if summary %}
+                <h2>Summary</h2>
+                <p>{{ summary }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
